@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- lang define o idioma padrão da webpage -->
+<html lang="pt-br">
+    <!-- head é a tag de cabeçalho da pagina, as informações aqui não aparecem no corpo da pagina -->
+<head>
+    <!-- o charset define a codificação -->
+    <meta charset="UTF-8">
+    <!-- tag para compatibilidade com IE-Edge -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Define que a pagina tambem será aberta em dispositivos moveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo da pagina (aparece na guia do navegador) -->
+    <title>Apresentação | Fledson Henrique</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- a tag <body> leva todas as tags e informações do corpo da pagina -->
+<body>
+    
+    <!-- a tag <header> serve para melhor semantica do html, define o cabeçalho da pagina nesse caso vai ficar o menu -->
+    <header>
+        <!-- com a div eu defino caixas e separo meus segmentos (aqui fiz uma caixa para foto) -->
+        <div class="photo">
+            <!-- a tag <img> server para imagens (obvio) -->
+            <img src="./images/photos/perfil.jpg" alt="Foto Pessoal">
+        </div>
+        <!-- a tag <h1> serve para titulos (tem varios do h1 ao h6) aqui usei como titulo primario -->
+        <div class="titulo">
+            <h1>Fledson Henrique</h1>
+        </div>
+    </header>
+
+    <!-- a tag <main> é uma tag semantica, nela ficara o corpo da pagina -->
+    <main>
+        <!-- com a div eu defino caixas e separo meus segmentos -->
+        <div class="container">
+        
+            <!-- tag semantica, a tag <nav> representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página  -->
+            <nav class="menu" id="menu">
+                <!-- a tag <ul> é uma lista não ordernada (fica com uns pontinhos por padrão) -->
+                <ul>
+                    <!-- a tag <li> representa cada item da lista -->
+                        <!-- a tag <a> serve para definir um link -->
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#techs">Techs</a></li>
+                    <li><a href="#projects">Meus Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- section como o nome diz, crio seções dentro da pagina (caixa de seção para separar os segmentos)-->
+            <!-- sessão sobre mim -->
+            <section class="section" id="about">
+                <div class="container-grid">
+                   
+                    <!-- container grid para organizar as informações dentro das seções -->
+                    <div class="spot">
+                        <!-- o <h2> foi usado como subtitulo -->
+                        <h2>Sobre</h2>
+                        <!-- a tag <p> serve para definir paragragos -->
+                        <p>Olá, me chamo Fledson e tenho 25 anos, tenho formação em Ciência da Computação e estou atualmente estudando programação web.</p>
+                        <!-- a tag <p> serve para definir paragragos -->
+                        <p>Atualmente trabalho como Analista de Suporte de TI na Manná Automação onde trabalho bastante com o banco de dados MySQL, tanto com queries quanto com a manutenção do banco de dados.</p>
+                    </div>
+                
+                    <span>
+                        <img src="./images/photos/app.jpg" alt="foto pessoal 2">
+                    </span>
+                </div>
+            </section>
+
+            <!-- sessão de tecnologias  -->
+            <section class="section" id="techs">
+                <div class="container-grid">
+                    <h2>Techs</h2>
+                    <p>Estou mais focado nos estudos de JavaScript no momento mas segue abaixo outras ferramentas</p>
+                    <ul>
+                        <li>
+                            <p>
+                                <img src="./images/icons/techs/js1.svg" alt="imagem JavaScript">
+                            </p>
+                            JavaScript
+                        </li>
+                        <li>
+                            <p>
+                                <img src="./images/icons/techs/html.svg" alt="imagem html">
+                            </p>
+                            Html
+                        </li>
+                        <li>
+                            <p>
+                                <img src="./images/icons/techs/css.svg" alt="imagem css">
+                            </p>
+                            Css
+                        </li>
+                        <li>
+                            <p>
+                                <img src="./images/icons/techs/mysql.png" alt="imagem MySQL">
+                            </p>
+                            MySQL
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section" id="projects">
+                <div class="container-grid">
+
+                    <h2>
+                        Projetos
+                    </h2>
+
+                    <p>Segue abaixo alguns projetos</p>
+
+                    <div class="cards">
+                        <div class="card">
+                            <img src="./images/projects/ecoleta.png" alt="Foto">
+                            <p>Ecoleta</p>
+                            <div class="info">
+                                Sistema de cadastro de pontos de coletas de lixo na cidade realizado pela NLW#5
+                                <div class="techs-project">
+                                    <ul>
+                                        <li>
+                                            <img src="./images/icons/techs/html.svg" alt="Html">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/css.svg" alt="CSS">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/nodejs.svg" alt="NodeJS">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/nunjucjs.png" alt="Nunjucks">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/Sqlite.png" alt="SQLite">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./images/projects/ecoleta.png" alt="Foto">
+                            <p>Ecoleta</p>
+                            <div class="info">
+                                Sistema de cadastro de pontos de coletas de lixo na cidade realizado pela NLW#5
+                                <div class="techs-project">
+                                    <ul>
+                                        <li>
+                                            <img src="./images/icons/techs/html.svg" alt="Html">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/css.svg" alt="CSS">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/nodejs.svg" alt="NodeJS">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/nunjucjs.png" alt="Nunjucks">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/Sqlite.png" alt="SQLite">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./images/projects/ecoleta.png" alt="Foto">
+                            <p>Ecoleta</p>
+                            <div class="info">
+                                Sistema de cadastro de pontos de coletas de lixo na cidade realizado pela NLW#5
+                                <div class="techs-project">
+                                    <ul>
+                                        <li>
+                                            <img src="./images/icons/techs/html.svg" alt="Html">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/css.svg" alt="CSS">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/nodejs.svg" alt="NodeJS">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/nunjucjs.png" alt="Nunjucks">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/Sqlite.png" alt="SQLite">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./images/projects/ecoleta.png" alt="Foto">
+                            <p>Ecoleta</p>
+                            <div class="info">
+                                Sistema de cadastro de pontos de coletas de lixo na cidade realizado pela NLW#5
+                                <div class="techs-project">
+                                    <ul>
+                                        <li>
+                                            <img src="./images/icons/techs/html.svg" alt="Html">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/css.svg" alt="CSS">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/nodejs.svg" alt="NodeJS">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/nunjucjs.png" alt="Nunjucks">
+                                        </li>
+                                        <li>
+                                            <img src="./images/icons/techs/Sqlite.png" alt="SQLite">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <div class="container-grid">
+                    
+                    <h2>Network</h2>
+                    
+                    <p>Entre em contato pelos meios abaixo:</p>
+                    
+                    <ul>                    
+                        <li><a href="mailto:fledsonhenrique@gmail.com"><img src="./images/icons/socials/006-google-plus.png" alt=""></a></li>
+                        <li><a href="https://www.linkedin.com/in/fledson-henrique-051a9513a/"><img src="./images/icons/socials/004-linkedin.png" alt=""></a></li>
+                        <li><a href="https://github.com/Fledson"><img src="./images/icons/socials/001-github.png" alt=""></a></li>
+                        <li><a href="https://instagram.com/fledson_henrique"><img src="./images/icons/socials/003-instagram.png" alt=""></a></li>    
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <!-- aqui foi usado usa citação simples com a tag <q> o atributo cite é para referenciar de onde vem a citação, o legal é que o conteudo fica entre aspas duplas -->
+            <q cite="https://www.pensador.com/autor/paulo_coelho/">
+                Imagine uma nova história para sua vida e acredite nela
+            </q> 
+            --
+            <!-- a tag cite tambem pe para citação ele dá um negocio legal que é o italico automatico -->
+            <a href="https://www.pensador.com/autor/paulo_coelho/">
+                <cite>Paulo Coelho</cite>
+            </a>
+        </p>
+
+        <!-- adress é para colocar os dados do criador da pagina -->
+        <address>
+            <p>
+                Fledson Henrique <br>
+                <strong>São luis - Ma</strong>
+            </p> 
+        </address>
+    </footer>
+
+    <!-- SCROLLREVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
