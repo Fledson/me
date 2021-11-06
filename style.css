@@ -445,6 +445,15 @@ footer p a{
     color: var(--white-white);
 }
 
+@media (max-width: 962px) {
+    header .titulo h1 {
+        font-size: 2rem;
+    }
+    header .titulo::before, .titulo::after {
+        min-width: 10rem;
+    }
+}
+
 @media (max-width: 725px) {
     /* CONTAINER */
     .container-grid  h2 {
