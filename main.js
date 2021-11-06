@@ -18,7 +18,7 @@ const sections = document.querySelectorAll('main section[id]')
 
 function activateMenuAtCurrentSection() {
     // pegando o deslocamento da pagina + o tamnho da pagina dividido por 8 e dos 8 pegando apenas 2 pedaços
-    const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 2
+    const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 3
 
     for (section of sections) {
         const sectionTop = section.offsetTop

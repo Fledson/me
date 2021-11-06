@@ -28,6 +28,8 @@ body {
     --title-color: #00ADB5;
     --subtitle-color: #143cee;
 
+    font-family: 'Ubuntu', sans-serif;
+
 }
 
 header {
@@ -60,11 +62,16 @@ header {
 header .photo {
     animation: apagar 5s infinite;
     margin-bottom: 1rem;
+    
 }
 
 header .photo img {
     height: 20rem; /* Altura da img */
     clip-path: circle(40%); /* forma de circulo */ 
+    
+    -webkit-box-reflect: below 5px linear-gradient(
+        to-bottom, rgba(0,0,0,0), rgba(0,0,0,1)
+    );
 }
 
 .titulo{
@@ -84,6 +91,7 @@ header .photo img {
  }
  
  .titulo h1{
+    font-family: 'Poppins', sans-serif;
     color: var(--white); /* cor do texto */
     padding: 0 2rem; /* distancia do texto às linhas */
     font-weight: bold; /* negrito */
@@ -106,7 +114,7 @@ header .photo img {
     box-shadow: 0px 5px 12px rgb(0, 0, 0 / 92%);
     top: 0;
     z-index: 100;
-    width: 64em;
+    /* width: 64em; */
 }
 
 .menu {
@@ -121,7 +129,7 @@ header .photo img {
 
 .menu ul {
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     justify-content: center;
 
     list-style: none;
@@ -129,34 +137,39 @@ header .photo img {
 }
 
 .menu ul li a{
-    padding: 0 1.5rem;
+    /* padding: 0 1.5rem; */
+    width: 10rem;
+    height: 2rem;
     color: var(--white);
     text-decoration: none;
-    transition: margin 0.2s ease;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
 
-.menu ul li a:hover,
-.menu ul li a.active{
+.menu ul li a:hover{
     background-color: var(--black-hover);
     border-radius: .8rem;
 }
 
-/* .menu ul li a:hover::after{
+.menu ul li a:hover::after,
+.menu ul li a.active::after{
     display: block;
     align-items: center;
     content: "";
-    width: 5rem;
-    height: 2px;
-
+    width: 7rem;
+    height: 1px;
     background: linear-gradient(90deg, #cbe1f7, #95c0e7, #4e78a1);
-} */
+}
 
 /* ======== ESTILIZANDO SUB TITULOS E SECTIONS ======== */
 
 section {
-    padding: 3.5rem 4rem 1rem 4rem;
+    padding: 3.5rem 2rem 4rem;
 }
 
 section:nth-child(3)::before,
@@ -177,6 +190,7 @@ section:nth-child(5)::before{
 
 
 h2 {
+    font-family: 'Poppins', sans-serif;
     text-shadow: 0 0 4px black;
     /* text-align: center; */
     color: var(--white-white);
@@ -337,6 +351,7 @@ section#projects .card>img {
 }
 
 section#projects .card>p{
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -395,7 +410,7 @@ section#contact ul li a {
     padding: 1rem;
     display: flex;
     border-radius: 50%;
-
+    animation: rotacao 4s infinite ;
     transition: 1s;
 }
 
@@ -405,4 +420,137 @@ section#contact ul li a:hover {
 
 section#contact ul li a img {
     filter: contrast(0) brightness(100);
+}
+
+/* ==========  Footer  ========= */
+
+footer {
+    width: 64em;
+    max-width: calc(100% - 4em);
+    
+    margin: 0 auto 0;
+    padding: 1rem;
+
+    text-align: center;
+
+    color: var(--white-white);
+    /* background: rgba(51, 51, 51, 0.082); */
+}
+
+footer>p {
+    margin-bottom: 0.8rem;
+}
+
+footer p a{
+    color: var(--white-white);
+}
+
+@media (max-width: 725px) {
+    /* CONTAINER */
+    .container-grid  h2 {
+        color: var(--white-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section {
+        padding: 1rem 2rem 1rem;
+    }
+
+    
+
+    /* =========== HEADER ============== */
+    header {
+        height: 100vh;
+    }
+
+    header .titulo::before, .titulo::after {
+       display: none;
+    }
+
+    header .titulo h1 {
+        font-size: 2.2rem;
+    }
+
+    /* =========== MENU ============== */
+    .menu {
+        display: none;
+    }
+    .menu .menu-options {
+        display: none;
+    }
+
+    .menu .menu-options.active {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* =========== SECTION ABOUT ============== */
+    section#about .container-grid {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#about p {
+        text-align: center;
+    }
+
+    section#about .container-grid .spot h2+p {
+        margin-top: 0;
+    }
+
+    section#about .container-grid span img {
+        margin: 0;
+    }
+
+    /* =========== SECTION TECHS ============== */
+    section#techs ul {
+        flex-direction: column;
+    }
+
+    /* =========== SECTION PROJECTS ============== */
+    section#projects .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 440px) {
+    section#projects {
+        padding: 1rem 0.5rem 1rem;
+    }
+    section#projects .card {
+        min-width: 2rem;
+        /* grid-template-columns: 1fr; */
+    }
+}
+
+@media (max-width: 370px) {
+    .container {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    header .titulo h1 {
+        font-size: 2rem;
+    }
+
+    section#projects .card .techs-project ul{
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 100%;
+    }
+    header .titulo h1 {
+        font-size: 1.8rem;
+    }
 }
