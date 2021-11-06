@@ -42,6 +42,24 @@ function activateMenuAtCurrentSection() {
 
     }
 }
+// COnfigurando animação da biblioteca scrollreveal
+const scrollReveal = ScrollReveal({
+    origin: 'top',
+    distance: '2em',
+    duration: 600,
+    reset: true
+})
+
+// atribuindo os elementos da animação
+scrollReveal.reveal(
+    `
+    #about .spot p, #about span,
+    #techs h2, #techs p, #techs ul,
+    #projects h2, #projects p, #projects .card,
+    #contact h2, #contact p, #contact li,
+    footer p, footer address
+`, { interval: 90}
+)
 
 window.addEventListener('scroll', () => {
     changeHeaderWhenScroll()
